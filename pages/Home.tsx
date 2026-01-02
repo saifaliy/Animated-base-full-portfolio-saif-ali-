@@ -89,7 +89,7 @@ const Home: React.FC = () => {
            >
               <div className="aspect-[4/5] rounded-[2.5rem] lg:rounded-[3.5rem] overflow-hidden shadow-2xl border border-white/10 relative z-20 transition-all duration-700 hover:scale-[1.02]">
                  <img 
-                    src="/saifie.png"
+                    src="public/saifie.png"
                     alt="Saif Ali AI & Data Science Engineer" 
                     className="w-full h-full object-cover brightness-[0.75] contrast-[1.1] grayscale-[0.2]" 
                     loading="eager"
