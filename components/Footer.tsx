@@ -16,7 +16,7 @@ const Footer: React.FC = () => {
                 <Cpu className="text-white w-6 h-6" />
               </div>
               <div className="flex flex-col">
-                <span className="text-2xl font-black text-white leading-none tracking-tighter">SAI ALI</span>
+                <span className="text-2xl font-black text-white leading-none tracking-tighter">SAIF ALI</span>
                 <span className="text-[6px] font-black uppercase tracking-[0.4em] text-blue-500 mt-1">Intelligence Architect</span>
               </div>
             </div>
