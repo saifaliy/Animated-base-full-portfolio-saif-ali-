@@ -1,8 +1,57 @@
-
 import React from 'react';
 import SectionHeader from '../components/SectionHeader';
-import { EXPERIENCES } from '../constants';
-import { Briefcase, Calendar, CheckCircle2, FlaskConical, Laptop, Zap, Shield, Globe, Award } from 'lucide-react';
+import { Briefcase, Calendar, Laptop, Zap, Globe, ExternalLink } from 'lucide-react';
+
+const EXPERIENCES = [
+  {
+    type: 'Research',
+    role: 'Software Engineer - Research Division',
+    company: 'Livingston Research',
+    period: 'Jan 2025 – Present',
+    location: 'Remote, United Kingdom',
+    proofLink: 'https://drive.google.com/file/d/1HM-L42wPZA6fD71Kt8BRYYs-3BvfSIbj/view',
+    description: [
+      'Engineered and delivered 15+ technical reports on software development and data science, enhancing client understanding of real-world applications by 40% through clear documentation',
+      'Utilized Python, Jupyter Notebook, Pandas, and NumPy to perform exploratory data analysis and build statistical models, reducing data processing time by 25% through optimized algorithms',
+      'Developed comprehensive code documentation and sample implementations for machine learning projects, decreasing client onboarding time by 30%',
+      'Researched and implemented modern backend development frameworks and data workflow tools, increasing research efficiency by 35% through automation of repetitive tasks',
+      'Specialized in AI transformation delivering scalable data solutions for global enterprise stakeholders'
+    ],
+    skills: ['Python', 'Jupyter', 'Pandas', 'NumPy', 'Machine Learning', 'Data Analysis', 'Technical Documentation', 'Automation']
+  },
+  {
+    type: 'Corporate',
+    role: 'Computer Vision Intern',
+    company: 'Arch Technologies',
+    period: 'Aug 2025 – Sep 2025',
+    location: 'Islamabad, Pakistan',
+    proofLink: 'https://drive.google.com/file/d/1lWpm5Yy9OwNROqWpI6CM-rLssVjG69Qn/view',
+    description: [
+      'Built and optimized computer vision models using Python, OpenCV, TensorFlow, and PyTorch for image classification',
+      'Developed object detection and facial recognition systems achieving high accuracy in real-world applications',
+      'Enhanced automation capabilities in computer vision applications through advanced model optimization',
+      'Implemented scalable vision solutions for enterprise-level AI applications with photorealistic results',
+      'Specialized in AI solutions focusing on computer vision and deep learning ecosystems'
+    ],
+    skills: ['Python', 'OpenCV', 'TensorFlow', 'PyTorch', 'Computer Vision', 'Image Processing', 'Object Detection', 'Facial Recognition']
+  },
+  {
+    type: 'Corporate',
+    role: 'Web Development Engineer Intern',
+    company: 'Digital Empowerment Network (DEN)',
+    period: 'Sep 2024 – Oct 2024',
+    location: 'Wahcantt, Pakistan',
+    proofLink: 'https://drive.google.com/file/d/1OofwfVpLe-2KrQoxbVQzURrCi_wVMVz6/view',
+    description: [
+      'Engineered and maintained 5+ responsive websites using HTML5, CSS3, JavaScript ES6+, and React.js, improving user experience scores by 25% across all devices',
+      'Integrated RESTful APIs and backend services to manage dynamic content, ensuring seamless data flow between frontend interfaces and server-side systems with 99.8% uptime',
+      'Collaborated with cross-functional teams using Git and GitHub for version control, implementing CI/CD pipelines that reduced deployment time by 40%',
+      'Utilized Chrome DevTools and Lighthouse for performance optimization, achieving 90+ scores in accessibility, performance, and SEO across all developed applications',
+      'Implemented responsive design principles ensuring optimal performance on mobile, tablet, and desktop platforms'
+    ],
+    skills: ['HTML5', 'CSS3', 'JavaScript', 'React.js', 'RESTful APIs', 'Git', 'CI/CD', 'Performance Optimization', 'SEO']
+  }
+];
 
 const Experience: React.FC = () => {
   return (
@@ -28,10 +77,24 @@ const Experience: React.FC = () => {
                     <h3 className="text-4xl font-black mb-3 tracking-tight text-white">{exp.role}</h3>
                     <div className="text-2xl font-bold text-blue-500 mb-8 flex items-center gap-3">
                       {exp.company}
+                      {exp.proofLink && (
+                        <a 
+                          href={exp.proofLink} 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1 text-xs bg-white/10 px-3 py-1 rounded-full hover:bg-blue-600 transition-all group/link"
+                        >
+                          <ExternalLink className="w-3 h-3" />
+                          <span className="text-[10px] font-black uppercase tracking-[0.1em]">Proof</span>
+                        </a>
+                      )}
                     </div>
                     <div className="flex items-center gap-3 text-gray-400 font-black bg-white/5 w-fit px-6 py-3 rounded-2xl border border-white/5">
                       <Calendar className="w-5 h-5 text-blue-500" />
                       {exp.period}
+                    </div>
+                    <div className="mt-4 text-sm text-gray-500 font-medium">
+                      {exp.location}
                     </div>
                   </div>
                   
@@ -67,7 +130,7 @@ const Experience: React.FC = () => {
            <Zap className="w-20 h-20 text-blue-500 mx-auto mb-10 animate-pulse" />
            <h3 className="text-5xl font-black mb-8 text-white">The Engineering Ethos</h3>
            <p className="text-2xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
-             My journey from local internships at <span className="text-white">Masq Tech</span> and <span className="text-white">DEN</span> to international research at <span className="text-white">Livingston UK</span> defines a transition from developer to **Intelligence Architect**.
+             My journey from web development at <span className="text-white">DEN</span> to computer vision at <span className="text-white">Arch Technologies</span> and international AI research at <span className="text-white">Livingston Research UK</span> defines a transition from developer to <span className="text-white font-bold">Intelligence Architect</span>.
            </p>
         </div>
       </div>
